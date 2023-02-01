@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %} {{offer.offer_name}} {% endblock %}</h1>
+<p><i>Added on: <b>{{offer.added}}</b></i></p>
+<h3>Description:</h3>
+<p>{{offer.description}}</p>
+{% for image in car_images %}
+<img src="{{image.image_url}}">
+{% endfor %}
+{% endblock %}

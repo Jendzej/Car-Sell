@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %}Carsell{% endblock %}</h1>
+<p>Place, where You can sell your old as fuck car</p>
+{% for car in cars %}
+<div class="single-car" id="{{car.id}}">
+    <h3>{{ car.offer_name }}</h3>
+    <p><i>Added on: {{ car.added }}</i></p>
+    <p>{{ car.description}}</p>
+    <p>Brand: <b>{{ car.brand }}</b></p>
+    <p>Model: <b>{{ car.car_model }}</b></p>
+    {% for image in car.car_images %}
+    <img src="{{ image.image_url }}">
+    {% endfor %}
+    <h4>{{ car.price }} $</h4>
+</div>
+
+{% endfor %}
+{% endblock %}
