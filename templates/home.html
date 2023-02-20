@@ -6,13 +6,13 @@
 <div class="single-car" id="{{car.id}}">
     <h3>{{ car.offer_name }}</h3>
     <p><i>Added on: {{ car.added }}</i></p>
-    <p>{{ car.description}}</p>
     <p>Brand: <b>{{ car.brand }}</b></p>
     <p>Model: <b>{{ car.car_model }}</b></p>
     {% for image in car.car_images %}
     <img src="{{ image.image_url }}">
     {% endfor %}
     <h4>{{ car.price }} $</h4>
+    <a href="{{ url_for('car_offer', car_id=car.id) }}">See offer</a>
 </div>
 
 {% endfor %}

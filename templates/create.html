@@ -7,6 +7,9 @@
     <input type="text" id="offer_name" name="offer_name" placeholder="Offer name"
            value="{{ request.form['offer_name'] }}">
 
+    <label for="user_id">User id</label>
+    <input type="text" id="user_id" name="user_id">
+
     <label for="description">Content</label>
     <textarea id="description" name="description" placeholder="Post content" class="form-control">{{ request.form['description'] }}</textarea>
 

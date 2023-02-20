@@ -2,6 +2,9 @@
 {% block content %}
 <h1>{% block title %} {{offer.offer_name}} {% endblock %}</h1>
 <p><i>Added on: <b>{{offer.added}}</b></i></p>
+<p>Brand: <b>{{brand}}</b></p>
+<p>Model: <b>{{offer.car_model}}</b></p>
+<h2>Price: <i>{{offer.price}} $</i></h2>
 <h3>Description:</h3>
 <p>{{offer.description}}</p>
 {% for image in car_images %}
